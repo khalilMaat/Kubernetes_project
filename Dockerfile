@@ -1,8 +1,12 @@
+#Image Parent 
 FROM centos:latest
 
+#Author of Dockerfile
 MAINTAINER maatoug610@gmail.com
 
+#directory for the app code
 WORKDIR /var/www/html
+
 
 RUN yum install -y httpd \
 zip\
@@ -18,6 +22,4 @@ RUN rm -rf photogenic photogenic.zip
 
 CMD ["/usr/sbin/httpd","-D","FOREGROUND"]
 
-EXPOSE 80
-
-
+EXPOSE 80 22
