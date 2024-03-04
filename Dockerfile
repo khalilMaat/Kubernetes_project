@@ -7,6 +7,7 @@ MAINTAINER maatoug610@gmail.com
 #directory for the app code
 WORKDIR /var/www/html
 
+#installing
 
 RUN yum install -y httpd \
 zip\
