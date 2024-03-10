@@ -9,9 +9,9 @@ WORKDIR /var/www/html
 
 #installing
 
-RUN apt install apache2 -y
-RUN apt install zip -y
-RUN apt install unzip -y
+RUN apt-get update && \
+    apt-get install -y apache2 && \
+    rm -rf /var/lib/apt/lists/*
 
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page254/photogenic.zip /var/www/html/
 
