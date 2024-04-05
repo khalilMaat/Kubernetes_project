@@ -1,0 +1,20 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+   name: khalil
+spec:
+   replicas: 2
+   selector:      # tells the controller which pods to watch/belong to
+    matchLabels:
+     app: khalil
+   template:
+      metadata:
+        labels:
+          app: khalil
+      spec:
+       containers:
+        - name: khalil
+          image: khalil12/project-kubernetes
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 80

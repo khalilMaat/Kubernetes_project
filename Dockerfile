@@ -22,4 +22,4 @@ RUN rm -rf photogenic photogenic.zip
 
 CMD ["apache2ctl","-D","FOREGROUND"]
 
-EXPOSE 80 22
+EXPOSE 80

@@ -1,0 +1,7 @@
+- name: deployment playbook of kubernetes cluster
+  hosts: all
+  tasks:
+    - name: create new Deployment
+      command: kubectl apply -f /home/khalil/Deployment.yml
+    - name: create new service
+      command: kubectl apply -f /home/khalil/Service.yml
