@@ -3,7 +3,11 @@
   tasks:
     - name: start Minikube
       command: minikube start
+    - name: delete old Deployment
+      command: kubectl delete -f /home/ubuntu/Deployment.yml
+    - name: delete old Service
+      command: kubectl delete -f /home/ubuntu/Service.yml
     - name: create new Deployment
       command: kubectl apply -f /home/khalil/Deployment.yml
-    - name: create new service
+    - name: create new Service
       command: kubectl apply -f /home/khalil/Service.yml
