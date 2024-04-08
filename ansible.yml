@@ -4,9 +4,9 @@
     - name: start Minikube
       command: minikube start
     - name: delete old Deployment
-      command: kubectl delete -f /home/ubuntu/Deployment.yml
+      command: kubectl delete -f /home/khalil/Deployment.yml
     - name: delete old Service
-      command: kubectl delete -f /home/ubuntu/Service.yml
+      command: kubectl delete -f /home/khalil/Service.yml
     - name: create new Deployment
       command: kubectl apply -f /home/khalil/Deployment.yml
     - name: create new Service
